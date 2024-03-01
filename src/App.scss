@@ -1,0 +1,87 @@
+$moorkeblaa: #2A324B;
+$lyseblaa: #58699D;
+$graahvit: #E1E5EE;
+$hvit: #fff;
+
+:root {
+  --moorkeblaa: #{$moorkeblaa};
+  --lyseblaa: #{$lyseblaa};
+  --graahvit: #{$graahvit};
+  --hvit: #{$hvit};
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--graahvit);
+}
+
+header {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 27px 64px;
+  background-color: #eaeaea;
+  cursor: pointer;
+  background-color: var(--moorkeblaa);
+  color: var(--hvit);
+  font-weight: 1000;
+  font-size: 20px;
+
+  &:hover {
+    background-color: var(--hvit);
+    color: var(--moorkeblaa);
+  }
+}
+
+.resourceNav:hover {
+  background-color: var(--hvit);
+}
+
+p {
+  padding: 0px 60px 30px;
+  text-align: left;
+}
+
+.resource-container {
+  h2 {
+    text-align: left;
+    margin-left: 58px;
+    font-weight: 1200;
+    font-size: 30px;
+    color: var(--moorkeblaa);
+  }
+  
+  .sources-list {
+    text-align: left;
+    margin-left: 60px;
+  }
+}
+
+#resourceNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#resourceContent {
+  text-align: center;
+  width: 1200px;
+  padding: 20px;
+  height: 350px;
+  background-color: var(--hvit);
+}
