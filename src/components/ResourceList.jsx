@@ -15,9 +15,6 @@ export default function ResourceNav({ resources, showResourceContent }) {
         
               showResourceContent(resources[0])
             }
-          }, [resources, showResourceContent])
-        
+          }, [resources, showResourceContent]))
         }
-    }
-}
 
