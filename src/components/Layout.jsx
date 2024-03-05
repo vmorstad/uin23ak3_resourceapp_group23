@@ -1,6 +1,5 @@
 import React from 'react';
 import Resources from './Resources'; // Importer Resources-komponenten
-import resources from './ressurser'; // Importer resources-arrayen
 
 function Layout() {
   return (

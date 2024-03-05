@@ -13,10 +13,10 @@ function App() {
 <body>
     <header>
         <nav id="resourceNav">
-            
+          
         </nav>
         <div id="resourceContent">
-            
+
         </div>
     </header>
 
