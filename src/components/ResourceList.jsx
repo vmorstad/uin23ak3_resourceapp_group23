@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import '../assets/ressurser'
 
 export default function ResourceNav({ resources, showResourceContent }) {
+    
     return (
 
         useEffect(() => {
@@ -16,8 +17,8 @@ export default function ResourceNav({ resources, showResourceContent }) {
               showResourceContent(resources[0])
             }
           }, [resources, showResourceContent])
-        
-        }
-    }
-}
+    )
+}       
+
+
 

@@ -5,8 +5,7 @@ import resources from './ressurser';
 function Layout() {
   return (
     <>
- 
-  
+
   </>
   )
 }

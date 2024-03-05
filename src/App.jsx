@@ -2,12 +2,12 @@ import './App.scss'
 import './components/ResourceList'
 import './assets/ressurser'
 import ResourceNav from './components/ResourceList'
+import React from 'react';
 
 function App() {
 
   return (
     <>
-
 <body>
     <header>
         <nav id="resourceNav">
@@ -25,5 +25,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
