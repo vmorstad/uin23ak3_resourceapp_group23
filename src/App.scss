@@ -76,6 +76,9 @@ p {
 #resourceNav {
   display: flex;
   justify-content: space-between;
+  width: 1200px;
+  height: 350px;
+  // fjerne hight og width
 }
 
 #resourceContent {
