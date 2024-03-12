@@ -1,27 +1,22 @@
 import './App.scss'
-import './components/ResourceList'
+import './components/CategoryComponent'
 import './assets/ressurser'
-import ResourceNav from './components/ResourceList'
+import CategoryComponent from './components/CategoryComponent'
+import ContentComponent from './components/ContentComponent'
 
 function App() {
 
   return (
-
-<body>
+      //fjernet body fra app.jsx, er allerde i index.html body cannot be child
     <header>
-        <nav id="resourceNav">
-            <ResourceNav />
-            <h1>sdgsd</h1>
+        <nav>
+            <CategoryComponent />
         </nav>
         <div id="resourceContent">
-            <h1>sfgehbd</h1>
-            
+            <ContentComponent />
         </div>
     </header>
 
-    <script src="ressurser.js"></script>
-    <script src="javascript.js"></script>
-</body>
   )
 }
 
