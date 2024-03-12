@@ -1,4 +1,4 @@
-import './App.scss'
+import './styles/App.scss'
 import './components/ResourceList'
 import './assets/ressurser'
 import ResourceNav from './components/ResourceList'
