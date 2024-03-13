@@ -1,20 +1,15 @@
 import React from 'react';
 import resources from '../assets/ressurser'; // Importing the resources data
 
-function getResourcesByCategory(category) {
-  console.log('getResourcesByCategory function is being called.')
-  return resources.filter(resource => resource.category === category);
-}
-
 function ContentComponent({ category }) {
-  console.log('ContentComponent function is being called.')
-  const categoryResources = getResourcesByCategory(category);
+
+  const filteredResources = resources.filter(resource => resource.category === category);
 
   return (
     <div>
-      <h2>{category} Resources</h2>
+      <h2>{category.toUpperCase()}</h2>
       <ul>
-        {categoryResources.map((resource, index) => (
+        {filteredResources.map((resource, index) => (
           <li key={index}>
             <a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title}</a>
           </li>
@@ -23,5 +18,6 @@ function ContentComponent({ category }) {
     </div>
   );
 }
+
 
 export default ContentComponent;
