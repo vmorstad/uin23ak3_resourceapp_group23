@@ -14,7 +14,7 @@ function App() {
   return (
       
     <header>
-        <nav class="resource-container">
+        <nav id="resourceNav">
             <CategoryComponent onSelectCategory={handleSelectCategory}/>
         </nav>
         <div id="resourceContent">

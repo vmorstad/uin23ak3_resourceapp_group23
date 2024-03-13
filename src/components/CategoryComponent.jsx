@@ -5,15 +5,13 @@ function CategoryComponent({ onSelectCategory }) {
   const categories = Array.from(new Set(resources.map(resource => resource.category))); // Extracting unique categories
 
   return (
-    <div>
-      <ul>
+      <div>
         {categories.map((category, index) => (
           <li key={index} onClick={() => onSelectCategory(category)}>
             {category}
           </li>
         ))}
-      </ul>
-    </div>
+      </div>
   );
 }
 
