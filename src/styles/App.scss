@@ -53,10 +53,6 @@ nav li {
   background-color: var(--hvit);
 }
 
-p {
-  padding: 0px 60px 30px;
-  text-align: left;
-}
 
 .resource-container {
   h2 {
@@ -70,20 +66,18 @@ p {
   .sources-list {
     text-align: left;
     margin-left: 60px;
+    color: var(--lyseblaa)
   }
 }
 
 #resourceNav {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
-  height: 350px;
-  // fjerne hight og width
 }
 
 #resourceContent {
   text-align: center;
-  width: 1200px;
+  //width: 1200px;
   padding: 20px;
   height: 350px;
   background-color: var(--hvit);

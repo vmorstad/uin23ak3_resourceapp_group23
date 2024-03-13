@@ -2,19 +2,16 @@ import React from 'react';
 import resources from '../assets/ressurser'; // Importing the resources data
 
 function CategoryComponent({ onSelectCategory }) {
-  console.log('CategoryComponent function is being called.')
   const categories = Array.from(new Set(resources.map(resource => resource.category))); // Extracting unique categories
 
   return (
-    <div>
-      <ul>
+      <div>
         {categories.map((category, index) => (
           <li key={index} onClick={() => onSelectCategory(category)}>
             {category}
           </li>
         ))}
-      </ul>
-    </div>
+      </div>
   );
 }
 
