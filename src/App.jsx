@@ -17,7 +17,7 @@ function App() {
         <nav id="resourceNav">
             <CategoryComponent onSelectCategory={handleSelectCategory}/>
         </nav>
-        <div id="resourceContent" class="resource-container" >
+        <div id="resourceContent" className="resource-container" >
             <ContentComponent category={selectedCategory}/>
         </div>
     </header>

@@ -28,11 +28,6 @@ header {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
 nav li {
   display: inline-block;
   padding: 27px 64px;
@@ -49,10 +44,6 @@ nav li {
   }
 }
 
-.resourceNav:hover {
-  background-color: var(--hvit);
-}
-
 
 .resource-container {
   h2 {
@@ -63,10 +54,13 @@ nav li {
     color: var(--moorkeblaa);
   }
   
-  .sources-list {
+  ul {
     text-align: left;
     margin-left: 60px;
-    color: var(--lyseblaa)
+  }
+
+  li a {
+    color: var(--lyseblaa);
   }
 }
 
