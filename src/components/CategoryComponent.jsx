@@ -6,11 +6,13 @@ function CategoryComponent({ onSelectCategory }) {
 
   return (
       <div>
+        <ul>
         {categories.map((category, index) => (
           <li key={index} onClick={() => onSelectCategory(category)}>
             {category}
           </li>
         ))}
+        </ul>
       </div>
   );
 }

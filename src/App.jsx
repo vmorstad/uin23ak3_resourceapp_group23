@@ -14,10 +14,10 @@ function App() {
   return (
       
     <header>
-        <nav id="resourceNav">
+        <nav>
             <CategoryComponent onSelectCategory={handleSelectCategory}/>
         </nav>
-        <div id="resourceContent" className="resource-container" >
+        <div id="resource-container">
             <ContentComponent category={selectedCategory}/>
         </div>
     </header>
