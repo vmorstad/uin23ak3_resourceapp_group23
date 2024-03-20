@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import resources from "../assets/ressurser.js";
 import { Link } from "react-router-dom";
 
-export default function CategoryComponent({ activeTag, setActiveTag }) {
+export default function CategoryComponent({ currentCategory, setCurrentCategory }) {
   const uniqueTags = [];
 
   resources.forEach((category) => {
@@ -20,8 +20,8 @@ export default function CategoryComponent({ activeTag, setActiveTag }) {
               <Link
                 to={`/${category}`}
                 key={category}
-                className={activeTag === category ? "active" : ""}
-                onClick={() => setActiveTag(category)}
+                className={currentCategory === category}
+                onClick={() => setCurrentCategory(category)}
               >
                 <li>{category}</li>
               </Link>
