@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import resources from "../assets/ressurser.js";
 import { Link } from "react-router-dom";
 
-export default function Nav({ activeTag, setActiveTag }) {
+export default function CategoryComponent({ activeTag, setActiveTag }) {
   const uniqueTags = [];
 
   resources.forEach((category) => {

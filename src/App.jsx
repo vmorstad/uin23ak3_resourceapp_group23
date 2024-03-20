@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import ContentComponent from "./components/Layout";
-import Content from "./components/ContentComponent"; // Add missing import statement
+import Layout from "./components/Layout";
+import Content from "./components/ContentComponent";
 import resources from "./assets/ressurser";
 
 function App() {
   return (
-    <ContentComponent>
+    <Layout>
       <Routes>
         <Route path="/html" element={<Content resources={resources} />} />
         <Route path="/css" element={<Content resources={resources} />} />
@@ -14,7 +14,7 @@ function App() {
         <Route path="/react" element={<Content resources={resources} />} />
         <Route path="/headless-CMS" element={<Content resources={resources} />} />
       </Routes>
-    </ContentComponent>
+    </Layout>
   );
 }
 
