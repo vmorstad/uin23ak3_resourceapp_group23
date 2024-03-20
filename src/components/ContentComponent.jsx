@@ -1,23 +1,11 @@
-import React from 'react';
-import resources from '../assets/ressurser'; // Importing the resources data
+import resources from "../assets/ressurser.js";
 
-function ContentComponent({ category }) {
-
-  const filteredResources = resources.filter(resource => resource.category === category);
+export default function Content(props) {
+  const { activeTab } = props;
 
   return (
-    <div>
-      <h2>{category.toUpperCase()}</h2>
-      <ul>
-        {filteredResources.map((resource, index) => (
-          <li key={index}>
-            <a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div id="resource-container">
+        <h2>{activeTab}</h2>
+      </div>
   );
 }
-
-
-export default ContentComponent;

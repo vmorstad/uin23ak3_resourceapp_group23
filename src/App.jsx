@@ -1,29 +1,21 @@
-import React, { useState } from 'react';
-import './styles/App.scss'
-import './assets/ressurser'
-import CategoryComponent from './components/CategoryComponent'
-import ContentComponent from './components/ContentComponent'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import ContentComponent from "./components/Layout";
+import Content from "./components/ContentComponent"; // Add missing import statement
+import resources from "./assets/ressurser";
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState("html"); // Start med html kategori
-
-  const handleSelectCategory = (category) => {
-    setSelectedCategory(category); // Setter den valgte kategorien
-  };
-
   return (
-      
-    <header>
-        <nav>
-            <CategoryComponent onSelectCategory={handleSelectCategory}/>
-        </nav>
-        <div id="resource-container">
-            <ContentComponent category={selectedCategory}/>
-        </div>
-    </header>
-
-  )
+    <ContentComponent>
+      <Routes>
+        <Route path="/html" element={<Content resources={resources} />} />
+        <Route path="/css" element={<Content resources={resources} />} />
+        <Route path="/javaScript" element={<Content resources={resources} />} />
+        <Route path="/react" element={<Content resources={resources} />} />
+        <Route path="/headless-CMS" element={<Content resources={resources} />} />
+      </Routes>
+    </ContentComponent>
+  );
 }
 
-
-export default App
+export default App;

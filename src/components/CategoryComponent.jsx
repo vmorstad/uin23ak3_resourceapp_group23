@@ -1,20 +1,34 @@
-import React from 'react';
-import resources from '../assets/ressurser'; // Importing the resources data
+import React, { useState } from "react";
+import resources from "../assets/ressurser.js";
+import { Link } from "react-router-dom";
 
-function CategoryComponent({ onSelectCategory }) {
-  const categories = Array.from(new Set(resources.map(resource => resource.category))); // Extracting unique categories
+export default function Nav({ activeTag, setActiveTag }) {
+  const uniqueTags = [];
+
+  resources.forEach((category) => {
+    if (uniqueTags.indexOf(category.category) === -1) {
+      uniqueTags.push(category.category);
+    }
+  });
 
   return (
-      <div>
-        <ul>
-        {categories.map((category, index) => (
-          <li key={index} onClick={() => onSelectCategory(category)}>
-            {category}
-          </li>
-        ))}
-        </ul>
-      </div>
+    <>
+      <nav>
+        <div>
+          <ul>
+            {uniqueTags.map((category) => (
+              <Link
+                to={`/${category}`}
+                key={category}
+                className={activeTag === category ? "active" : ""}
+                onClick={() => setActiveTag(category)}
+              >
+                <li>{category}</li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }
-
-export default CategoryComponent;
