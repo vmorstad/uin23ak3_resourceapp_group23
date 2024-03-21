@@ -3,23 +3,24 @@ import resources from "../assets/ressurser.js";
 import { Link } from "react-router-dom";
 
 export default function CategoryComponent({ currentCategory, setCurrentCategory }) {
-  const uniqueTags = [];
+  const uniqueCategory = [];
 
   resources.forEach((category) => {
-    if (uniqueTags.indexOf(category.category) === -1) {
-      uniqueTags.push(category.category);
+    if (uniqueCategory.indexOf(category.category) === -1) {
+      uniqueCategory.push(category.category);
     }
   });
+
   return (
     <>
       <nav>
         <div>
           <ul>
-            {uniqueTags.map((category) => (
+            {uniqueCategory.map((category) => (
               <Link
                 to={`/${category}`}
                 key={category}
-                className={currentCategory === category}
+                className={currentCategory === category ? "active" : ""}
                 onClick={() => setCurrentCategory(category)}
               >
                 <li>{category}</li>

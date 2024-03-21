@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ContentComponent from "./components/Layout";
-import Content from "./components/ContentComponent"; // Add missing import statement
+import Content from "./components/ContentComponent";
 import resources from "./assets/ressurser";
 
 function App() {
